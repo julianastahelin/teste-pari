@@ -1,0 +1,17 @@
+Decisões de projeto:
+
+- O funcionamento da implementação das classes ClienteDAOImpl, AluguelDAOImpl e FilmeDAOImpl está demonstrado na classe Main.
+Dispus sequencialmente uma demonstração de cada operação a ser realizada com cada uma das classes. Retirando os comentários e executando,
+é possível verificar as operações de inserir, editar, deletar, listar e encontrar em funcionamento para cada uma das classes,
+incluindo as relações entre filme e aluguel.
+
+- Na classe AluguelDAOImpl optei por criar um método para listar os filmes relacionados a um aluguel, 
+buscando seus detalhes e devolvendo uma lista de objetos do tipo Filme. Esse método evita a repetição do algoritmo, pois utilizei da mesma forma para buscar
+um aluguel (em find()) e listar todos (em list()).
+
+- Na mesma classe, de maneira semelhante, optei por criar um método adicional para buscar os dados do cliente relacionado ao aluguel, retornando um objeto do
+tipo Cliente completo.
+
+- Para a edição de filmes e aluguéis optei por criar classes utilitárias que me permitissem, mantendo a interface padrão, implementar um "method overloading"
+para ter diferentes funções do tipo edit(). Decidi desta forma para poder possibilitar tanto a edição de todos os campos como a edição de apenas um campo,
+de forma a não exigir que todos os campos sejam inseridos no segundo caso.

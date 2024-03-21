@@ -1,0 +1,11 @@
+Seu nome: Juliana Coelho Stahelin
+
+1) SELECT * FROM en_filme ORDER BY data_lancamento ASC LIMIT 1;
+
+2) SELECT c.id_cliente, c.nome, COUNT(a.id_aluguel) AS alugueis
+FROM en_cliente c
+LEFT JOIN en_aluguel a ON c.id_cliente = a.id_cliente
+GROUP BY c.id_cliente, c.nome
+ORDER BY alugueis ASC;
+
+3)
